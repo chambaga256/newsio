@@ -1,4 +1,4 @@
-# Newsio
+ # Newsio
 
 A news application built using ReactJS (Reusable Components) and [NewsAPI](https://newsapi.org/) that helps list and preview news articles from various sources as well as display latest and trending news on the home page. Get up-to-date breaking news and articles from news sources and blogs all over the web.
 You will need an API key from https://newsapi.org.

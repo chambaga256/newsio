@@ -31,7 +31,7 @@ class MainLayout extends React.Component {
   async componentDidMount() {
     const sources = await fetchSources();
 
-    this.setState({ sources });
+    this.setState(sources);
   }
 
   loadNews(query) {
@@ -47,7 +47,7 @@ class MainLayout extends React.Component {
         <Sider trigger={null} collapsible collapsed={!this.state.collapsed}>
           <div className="logo"><h2>{!this.state.collapsed ? 'N' : 'Newsio'}</h2></div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['-1']}>
-            <Menu.Item onClick={() => this.setState({ homePage: true })} key="-1" icon={<StockOutlined />}>
+            <Menu.Item onClick={() => this.setState({ homePage: true })} key={-1} icon={<StockOutlined />}>
               Top News
             </Menu.Item>
             {this.state.sources.map((source) =>

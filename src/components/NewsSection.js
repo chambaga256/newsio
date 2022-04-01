@@ -15,19 +15,19 @@ const NewsSection = (request) => {
     }, [request]);
 
     return (
-        <div>
+        <div > 
             <Row>
                 <Col>
                     <h1 style={{ fontSize: '30px' }}>{request.topHeading}</h1>
                 </Col>
             </Row>
-            <Row>
+            <Row >
                 {newsSection.length > 1 ?
                     newsSection.map((article, key) =>
                         article.urlToImage === "" || article.urlToImage === null ? null :
                             <Col key={key} md={{ span: 8 }} sm={{ span: 24 }} >
                                 <Card onClick={() => window.open(article.url, "_blank")} type="inner" hoverable="true"
-                                    style={{ width: 380, marginBottom: 20 }}
+                                    style={{ width: 400, marginBottom: 30 , height:400}}
                                     cover={article.urlToImage === "" || article.urlToImage === null ? null :
                                         <img
                                             alt={article.title}
